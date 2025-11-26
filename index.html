@@ -17,15 +17,23 @@
       --shadow: 0 6px 18px rgba(16,24,40,0.08);
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,var(--bg),#efecec 120px);
-      color:#222;
-      line-height:1.4;
-    }
+    body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #efecec 120px);
+  color: #222;
+  line-height: 1.4;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+}
 
-    /* Header */
+.wrap {
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 20px 0; 
+  flex-grow: 1; 
+}
     header{
       display:flex;
       align-items:center;
@@ -63,30 +71,27 @@
       font-size:0.95rem;
     }
 
-    /* Hero */
-    .hero{
-      max-width:1100px;
-      margin:22px auto;
-      display:flex;
-      gap:24px;
-      align-items:center;
-      padding:28px;
-      border-radius:var(--radius);
-      background: rgba(255,255,255,0.9);
-      box-shadow: var(--shadow);
-      /* Reset default flex-wrap behavior to manage elements better */
-      flex-wrap: wrap; 
-      justify-content: space-between;
-    }
+.hero {
+  max-width: 1100px;
+  margin: 22px auto;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
     
-    /* DESKTOP LAYOUT ADJUSTMENTS for new structure */
     .hero .hero-text { 
-        max-width: 50%; /* Text area takes up half the space */
-        padding-right: 20px; /* Space between text and image */
+        max-width: 50%; 
+        padding-right: 20px; 
     }
     .hero .intro {
-        /* Buttons container is separate from text now */
-        width: 100%; /* Forces buttons onto a new line below the text/image pair */
+        width: 100%;
         margin-top: 16px;
     }
     .hero .visual {
@@ -163,15 +168,14 @@
     .desc{color:var(--muted); font-size:0.95rem; flex:1}
     .controls{margin-top:8px}
 
-    footer{
-      margin-top:40px;
-      padding:28px 20px;
-      text-align:center;
-      color:var(--muted);
-      font-size:0.9rem;
-    }
+    footer {
+  margin-top: auto;
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
-    /*  MODIFIED MEDIA QUERY FOR MOBILE LAYOUT */
     @media (max-width:880px){
       .hero{
         flex-direction:column;
@@ -241,7 +245,8 @@
     </div>
 
     <div class="grid">
-
+        
+        <!-- Category 1 -->
       <article class="card">
         <div class="thumb">
           <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/0997f69cfa6363d61e97eb1977c287120f1ccc1d/Images/Category/Baby_Accessories.png" alt="Crochet Products for Babies">
@@ -252,7 +257,8 @@
           <a class="btn" href="Baby_Accessories.html" style="text-decoration: none;">View items</a>
         </div>
       </article>
-
+      
+      <!-- Category 2 -->
       <article class="card">
         <div class="thumb">
           <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/0997f69cfa6363d61e97eb1977c287120f1ccc1d/Images/Category/Bags.png" alt="Crochet Handbag Products">
@@ -263,13 +269,26 @@
           <a class="btn" href="Handbags.html" style="text-decoration: none;">View items</a>
         </div>
       </article>
-
+      
+      <!-- Category 3 -->
       <article class="card">
         <div class="thumb">
           <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/0997f69cfa6363d61e97eb1977c287120f1ccc1d/Images/Category/Woman_Accessories.png" alt="Crochet Products for Women's Wear">
         </div>
         <div class="title">Crochet Women's Wear</div>
         <div class="desc">Soft and cozy socks, shawls, mufflers, and gloves designed for comfort and unique style.</div>
+        <div class="controls">
+          <a class="btn" href="Women_Accessories.html" style="text-decoration: none;">View items</a>
+        </div>
+      </article>
+      
+      <!-- Category 4 -->
+      <article class="card">
+        <div class="thumb">
+          <img src="https://raw.githubusercontent.com/" alt="Crochet Products for Women's Wear">
+        </div>
+        <div class="title">Bal Gopal</div>
+        <div class="desc">Divine attire, crafted for your Bal Gopal. Each hand-stitched outfit offers soft comfort and vibrant beauty, reflecting your deepest devotion for Thakur Ji.</div>
         <div class="controls">
           <a class="btn" href="Women_Accessories.html" style="text-decoration: none;">View items</a>
         </div>

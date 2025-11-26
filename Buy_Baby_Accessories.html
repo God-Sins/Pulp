@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Product Details - PULP</title>
+<meta name="description" content="Product details page for PULP handmade baby crochet & accessories." />
+<style>
+  :root {
+    --bg: #f7f6f4;
+    --card: #fff;
+    --accent: #c76a7c;
+    --accent-dark: #a44e5d;
+    --muted: #6b6b6b;
+    --radius: 12px;
+    --shadow: 0 6px 18px rgba(16,24,40,0.08);
+    --font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--bg);
+    color: #222;
+    line-height: 1.4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 2px 8px rgba(16,24,40,0.04);
+    z-index: 100;
+  }
+  .brand {
+    display: flex;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+    align-items: center;
+  }
+  .logo {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    border-radius: var(--radius);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(199,106,124,0.18);
+    user-select: none;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 16px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: var(--accent-dark);
+  }
+  main {
+    max-width: 640px;
+    margin: 24px auto;
+    padding: 0 20px 48px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+    margin: 0;
+    font-weight: 700;
+    color: #222;
+  }
+  .product-image {
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: contain;
+    max-height: 400px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+  }
+  .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+  }
+  .description {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .buy-button {
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    transition: background 0.3s ease;
+  }
+  .buy-button:hover,
+  .buy-button:focus {
+    background: var(--accent-dark);
+    outline: none;
+  }
+  footer {
+    margin-top: auto;
+    padding: 28px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  @media (max-width: 480px) {
+    main {
+      margin: 16px 12px 32px;
+      padding: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html" aria-label="Go to homepage">
+    <div class="logo" aria-hidden="true">CC</div>
+    <div>
+      <div style="font-weight:800">PULP</div>
+      <div style="font-size:0.8rem;color:var(--muted)">Handmade with love</div>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html#shop">Categories</a>
+    <a href="index.html#about">About</a>
+  </nav>
+</header>
+<main>
+  <h1 id="product-name">Product Name</h1>
+  <img id="product-image" class="product-image" src="" alt="Product image" />
+  <p class="price" id="product-price">$0.00</p>
+  <p class="description" id="product-description">Product description goes here.</p>
+  <a href="#" id="buy-amazon" class="buy-button" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+</main>
+<footer>
+  &copy; 2025 PULP. All rights reserved.
+</footer>
+<script>
+  const products = {
+    "red-frock": {
+      name: "Red Frock",
+      image: "https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_uczzq5uczzq5uczz.jpg",
+      price: "$49.99",
+      description: "A charming handmade red frock perfect for your baby’s special occasions. Soft, breathable, and crafted with care.",
+      amazonLink: "https://www.amazon.com/dp/B00EXAMPLE1"
+    },
+    "booties-socks": {
+      name: "Booties & Socks",
+      image: "https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties.png",
+      price: "$19.99",
+      description: "Cozy handcrafted baby booties and socks to keep tiny feet warm and stylish.",
+      amazonLink: "https://www.amazon.com/dp/B00EXAMPLE2"
+    },
+    "baby-blankets": {
+      name: "Baby Blankets",
+      image: "https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket.png",
+      price: "$34.99",
+      description: "Soft and warm crochet baby blankets made with premium yarn for delicate skin.",
+      amazonLink: "https://www.amazon.com/dp/B00EXAMPLE3"
+    },
+    "amigurumi-toys": {
+      name: "Amigurumi & Toys",
+      image: "https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys.png",
+      price: "$29.99",
+      description: "Handmade soft amigurumi toys, perfect for babies and toddlers as cuddly companions.",
+      amazonLink: "https://www.amazon.com/dp/B00EXAMPLE4"
+    }
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const prodKey = urlParams.get('prod');
+
+  if (prodKey && products[prodKey]) {
+    const prod = products[prodKey];
+    document.getElementById('product-name').textContent = prod.name;
+    const img = document.getElementById('product-image');
+    img.src = prod.image;
+    img.alt = prod.name;
+    document.getElementById('product-price').textContent = prod.price;
+    document.getElementById('product-description').textContent = prod.description;
+    const buyBtn = document.getElementById('buy-amazon');
+    buyBtn.href = prod.amazonLink;
+  } else {
+    document.querySelector('main').innerHTML = '<h1>Product Not Found</h1><p>Sorry, the product you are looking for does not exist.</p><a href="index.html" class="buy-button">Return to Shop</a>';
+  }
+</script>
+</body>
+</html>
