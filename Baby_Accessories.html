@@ -23,15 +23,15 @@
     touch-action: manipulation;
   }
   body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, var(--bg), #efecec 120px);
-  color: #222;
-  line-height: 1.4;
-  min-height: 100vh; 
-  display: flex;
-  flex-direction: column; 
-}
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, var(--bg), #efecec 120px);
+    color: #222;
+    line-height: 1.4;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+  }
   header {
     display: flex;
     justify-content: space-between;
@@ -45,18 +45,18 @@
     z-index: 100;
   }
   .unavailable-tag {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  background: rgba(199,106,124,0.75);
-  color: white;
-  font-weight: 650;
-  padding: 2px 4px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  pointer-events: none;
-  user-select: none;
-  z-index: 20;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background: rgba(199,106,124,0.75);
+    color: white;
+    font-weight: 650;
+    padding: 2px 4px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    user-select: none;
+    z-index: 20;
   }
   .brand {
     display: flex;
@@ -88,48 +88,42 @@
     color: var(--accent-dark);
   }
   main {
-  max-width: 95%;
-  margin: 24px auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
-  margin-bottom: 12px;
-  font-weight: 700;
-  width: 100%;
-  text-align: center; /* Centering title */
-}
-
-p.description {
-  color: var(--muted);
-  font-size: 1rem;
-  margin-bottom: 32px;
-  max-width: 95%;
-  text-align: center; /* Centering description */
-}
-
+    max-width: 95%;
+    margin: 24px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+    margin-bottom: 12px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+  }
+  p.description {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 32px;
+    max-width: 95%;
+    text-align: center;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 24px;
+  }
+  @media (min-width: 600px) {
     .product-grid {
-      display: grid;
-      grid-template-columns: 1fr; 
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    @media (min-width: 600px) {
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  }
+  @media (min-width: 1024px) {
+    .product-grid {
+     grid-template-columns: repeat(3, 1fr);
     }
-
-    @media (min-width: 1024px) {
-      .product-grid {
-       grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    
+  }
   .product-card {
     background: var(--card);
     border-radius: var(--radius);
@@ -166,13 +160,11 @@ p.description {
     border: 1px solid #ddd;
     background: #fafafa;
   }
-
   .slides {
     height: 100%; /* Use full height of slider */
     display: flex;
     transition: transform 0.3s ease;
   }
-
   .slides img {
     flex-shrink: 0;
     width: 100%;
@@ -184,15 +176,15 @@ p.description {
     cursor: pointer;
     display: block;
     margin: 0 auto;
-   }
-   .slides img.contain-v {
+  }
+  .slides img.contain-v {
     object-fit: contain;
   }
-   .slides img.contain-h {
-      object-position: center;
-      transform: scale(1.5);
-      object-fit: contain;
-      }
+  .slides img.contain-h {
+    object-position: center;
+    transform: scale(1.5);
+    object-fit: contain;
+  }
   .slider-button {
     position: absolute;
     top: 50%;
@@ -234,12 +226,12 @@ p.description {
     margin: 0;
   }
   footer {
-  margin-top: auto;
-  padding: 28px 20px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
+    margin-top: auto;
+    padding: 28px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
   @media (max-width: 880px) {
     nav a {
       margin-left: 8px;
@@ -263,7 +255,7 @@ p.description {
   </nav>
 </header>
 <main>
-    <!-- TITLE -->
+  <!-- TITLE -->
   <h1>Baby Crochet & Accessories</h1>
   <!-- DESCRIPTION -->
   <p class="description">Charming crochet wearables and decor paired with practical everyday accessories for the nursery. Explore our delightful collection of handmade baby hats, booties, blankets, stuffed toys, and more, crafted with care for your little ones.</p>
@@ -271,65 +263,69 @@ p.description {
   <section class="product-grid" aria-label="Baby Crochet and Accessories products">
   
   <!-- PRODUCT 1 -->
- <article class="product-card" tabindex="0" role="group" aria-labelledby="prod1-title">
-  <a href="Buy_Baby_Accessories.html?prod=red-frock" style="text-decoration:none; color:inherit; display:block;">
-    <div class="slider" data-slider>
-      <div class="slides">
-        <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_uczzq5uczzq5uczz.jpg" alt="Red Frock image 1" class="contain-h" />
-        <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/621ae95b3b2dbd15a5f2195a67e5433fe64908cf/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_2wue2b2wue2b2wue.jpg" alt="Red Frock image 2" class="contain-v" />
-        <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Accessories.png" alt="Red Frock image 3" class="contain-v" />
-        <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_acp9dcacp9dcacp9.jpg" alt="Red Frock image 4" class="contain-v" />
+  <article class="product-card" tabindex="0" role="group" aria-labelledby="prod1-title">
+    <a href="Buy_Baby_Accessories.html?prod=red-frock" style="text-decoration:none; color:inherit; display:block; position:relative;">
+      <div class="slider" data-slider>
+        <div class="slides">
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_uczzq5uczzq5uczz.jpg" alt="Red Frock image 1" class="contain-h" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/621ae95b3b2dbd15a5f2195a67e5433fe64908cf/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_2wue2b2wue2b2wue.jpg" alt="Red Frock image 2" class="contain-v" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Accessories.png" alt="Red Frock image 3" class="contain-v" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_acp9dcacp9dcacp9.jpg" alt="Red Frock image 4" class="contain-v" />
+        </div>
+        <div class="unavailable-tag">Currently Unavailable</div>
+        <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
+        <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <div class="unavailable-tag">Currently Unavailable</div>
-      <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
-      <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
-    </div>
-    <h2 id="prod1-title" class="product-title">Red Frock</h2>
+      <h2 id="prod1-title" class="product-title">Red Frock</h2>
+    </a>
   </article>
 
   <!-- PRODUCT 2 -->
   <article class="product-card" tabindex="0" role="group" aria-labelledby="prod2-title">
-           <a href="Buy_Baby_Accessories.html?prod=red-frock" style="text-decoration:none; color:inherit; display:block;">
-    <div class="slider" data-slider>
-      <div class="slides">
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties.png" alt="Booties & Socks image 1" />
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties2.png" alt="Booties & Socks image 2" />
+    <a href="Buy_Baby_Accessories.html?prod=booties-socks" style="text-decoration:none; color:inherit; display:block; position:relative;">
+      <div class="slider" data-slider>
+        <div class="slides">
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties.png" alt="Booties & Socks image 1" />
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties2.png" alt="Booties & Socks image 2" />
+        </div>
+        <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
+        <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
-      <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
-    </div>
-    <h2 id="prod2-title" class="product-title">Booties & Socks</h2>
+      <h2 id="prod2-title" class="product-title">Booties & Socks</h2>
+    </a>
   </article>
 
   <!-- PRODUCT 3 -->
   <article class="product-card" tabindex="0" role="group" aria-labelledby="prod3-title">
-           <a href="Buy_Baby_Accessories.html?prod=red-frock" style="text-decoration:none; color:inherit; display:block;">
-    <div class="slider" data-slider>
-      <div class="slides">
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket.png" alt="Baby Blankets image 1" />
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket2.png" alt="Baby Blankets image 2" />
+    <a href="Buy_Baby_Accessories.html?prod=baby-blankets" style="text-decoration:none; color:inherit; display:block; position:relative;">
+      <div class="slider" data-slider>
+        <div class="slides">
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket.png" alt="Baby Blankets image 1" />
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket2.png" alt="Baby Blankets image 2" />
+        </div>
+        <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
+        <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
-      <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
-    </div>
-    <h2 id="prod3-title" class="product-title">Baby Blankets</h2>
+      <h2 id="prod3-title" class="product-title">Baby Blankets</h2>
+    </a>
   </article>
 
   <!-- PRODUCT 4 -->
-  <article class="product-card" tabindex="0" role="group" aria-labelledby="prod4-title" >
-           <a href="Buy_Baby_Accessories.html?prod=red-frock" style="text-decoration:none; color:inherit; display:block;">
-    <div class="slider" data-slider>
-      <div class="slides">
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys.png" alt="Amigurumi & Toys image 1" />
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys2.png" alt="Amigurumi & Toys image 2" />
-        <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys3.png" alt="Amigurumi & Toys image 3" />
+  <article class="product-card" tabindex="0" role="group" aria-labelledby="prod4-title">
+    <a href="Buy_Baby_Accessories.html?prod=amigurumi-toys" style="text-decoration:none; color:inherit; display:block; position:relative;">
+      <div class="slider" data-slider>
+        <div class="slides">
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys.png" alt="Amigurumi & Toys image 1" />
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys2.png" alt="Amigurumi & Toys image 2" />
+          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys3.png" alt="Amigurumi & Toys image 3" />
+        </div>
+        <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
+        <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
-      <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
-    </div>
-    <h2 id="prod4-title" class="product-title">Amigurumi & Toys</h2>
+      <h2 id="prod4-title" class="product-title">Amigurumi & Toys</h2>
+    </a>
   </article>
-</section>
+  </section>
 </main>
 <footer>
   &copy; 2025 PULP. All rights reserved.
@@ -342,23 +338,27 @@ p.description {
 
     slider.querySelector(".slider-button.prev").onclick = e => {
       e.stopPropagation();
+      e.preventDefault();
       index = (index - 1 + count) % count;
       slides.style.transform = `translateX(-${index * 100}%)`;
     };
 
     slider.querySelector(".slider-button.next").onclick = e => {
       e.stopPropagation();
+      e.preventDefault();
       index = (index + 1) % count;
       slides.style.transform = `translateX(-${index * 100}%)`;
     };
 
-    slider.addEventListener("mousedown", e => e.preventDefault());
-
-    slides.addEventListener("click", e => {
-      if(e.target.tagName === 'IMG' && e.target.dataset.link) {
-        window.location.href = e.target.dataset.link;
-      }
+    // Prevent click on buttons from bubbling up to anchor link
+    slider.querySelectorAll(".slider-button").forEach(button => {
+      button.addEventListener("click", e => {
+        e.stopPropagation();
+        e.preventDefault();
+      });
     });
+
+    slider.addEventListener("mousedown", e => e.preventDefault());
 
     let startX = 0, dragging = false;
     slides.addEventListener("touchstart", e => {
