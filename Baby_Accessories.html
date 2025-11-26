@@ -151,32 +151,37 @@
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
   }
-  .slider {
-    position: relative;
-    width: 100%;
-    height: 220px; /* Match the slides height */
-    overflow: hidden;
-    border-radius: var(--radius);
-    border: 1px solid #ddd;
-    background: #fafafa;
-  }
+ .slider {
+  position: relative;
+  width: 100%;
+  max-width: 320px; /* max width for product card images */
+  height: auto;     /* let height adjust */
+  aspect-ratio: 4 / 3; /* maintain aspect ratio */
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  background: #fafafa;
+  margin: 0 auto; /* center horizontally */
+}
+
+.slides img {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;          /* auto height to keep aspect ratio */
+  object-fit: contain;   /* contain to avoid cropping */
+  object-position: center;
+  border-radius: var(--radius) var(--radius) 0 0;
+  pointer-events: auto;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
   .slides {
     height: 100%; /* Use full height of slider */
     display: flex;
     transition: transform 0.3s ease;
   }
-  .slides img {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: var(--radius) var(--radius) 0 0;
-    pointer-events: auto;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-  }
+ 
   .slides img.contain-v {
     object-fit: contain;
   }
@@ -262,7 +267,7 @@
   
   <section class="product-grid" aria-label="Baby Crochet and Accessories products">
   
-  <!-- PRODUCT 1 -->
+  <!-- PRODUCT 1 (Red_Frock) -->
   <article class="product-card" tabindex="0" role="group" aria-labelledby="prod1-title">
     <a href="Buy_Baby_Accessories.html?prod=red-frock" style="text-decoration:none; color:inherit; display:block; position:relative;">
       <div class="slider" data-slider>
@@ -280,51 +285,91 @@
     </a>
   </article>
 
-  <!-- PRODUCT 2 -->
+  <!-- PRODUCT 2 (Yellow Sweater) -->
+  <article class="product-card" tabindex="0" role="group" aria-labelledby="prod1-title">
+    <a href="Buy_Baby_Accessories.html?prod=yellow-sweater" style="text-decoration:none; color:inherit; display:block; position:relative;">
+      <div class="slider" data-slider>
+        <div class="slides">
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Yellow_Sweater/13.jpg" alt="Yellow Sweater image 1" class="contain-h" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Yellow_Sweater/14.jpg" alt="Yellow Sweater image 2" class="contain-v" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/b46c4f3bc9e8a465a793e3cdb5152a4fb2ed7469/Images/Category/Baby_Products/Yellow_Sweater/11.png" alt="Yellow Sweater image 3" class="contain-v" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/b46c4f3bc9e8a465a793e3cdb5152a4fb2ed7469/Images/Category/Baby_Products/Yellow_Sweater/12.png" alt="Yellow Sweater image 4" class="contain-v" />
+        </div>
+        <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
+        <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
+      </div>
+      <h2 id="prod1-title" class="product-title">Yellow Sweater</h2>
+    </a>
+  </article>
+
+  <!-- PRODUCT 3 (Swaddling Swinging) -->
   <article class="product-card" tabindex="0" role="group" aria-labelledby="prod2-title">
-    <a href="Buy_Baby_Accessories.html?prod=booties-socks" style="text-decoration:none; color:inherit; display:block; position:relative;">
+    <a href="Buy_Baby_Accessories.html?prod=swaddling-swinging" style="text-decoration:none; color:inherit; display:block; position:relative;">
       <div class="slider" data-slider>
         <div class="slides">
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties.png" alt="Booties & Socks image 1" />
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties2.png" alt="Booties & Socks image 2" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Swaddling_Swinging/13.jpg" alt="Swaddling Swinging image 1" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Swaddling_Swinging/12.jpg" alt="Swaddling Swinging image 2" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Swaddling_Swinging/11.jpg" alt="Swaddling Swinging image 3" />
         </div>
         <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
         <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <h2 id="prod2-title" class="product-title">Booties & Socks</h2>
+      <h2 id="prod2-title" class="product-title">Swaddling Swinging</h2>
     </a>
   </article>
 
-  <!-- PRODUCT 3 -->
+  <!-- PRODUCT 4 (Blue Yellow Ponchu) -->
   <article class="product-card" tabindex="0" role="group" aria-labelledby="prod3-title">
-    <a href="Buy_Baby_Accessories.html?prod=baby-blankets" style="text-decoration:none; color:inherit; display:block; position:relative;">
+    <a href="Buy_Baby_Accessories.html?prod=blue-yellow-ponchu" style="text-decoration:none; color:inherit; display:block; position:relative;">
       <div class="slider" data-slider>
         <div class="slides">
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket.png" alt="Baby Blankets image 1" />
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket2.png" alt="Baby Blankets image 2" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Blue_Yellow_Ponchu/12.jpg" alt="Blue Yellow Ponchu image 1" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Blue_Yellow_Ponchu/11.jpg" alt="Blue Yellow Ponchu image 2" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Blue_Yellow_Ponchu/13.jpg" alt="Blue Yellow Ponchu image 3" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Blue_Yellow_Ponchu/14.jpg" alt="Blue Yellow Ponchu image 4" />
         </div>
         <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
         <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <h2 id="prod3-title" class="product-title">Baby Blankets</h2>
+      <h2 id="prod3-title" class="product-title">Blue Yellow Ponchu</h2>
     </a>
   </article>
 
-  <!-- PRODUCT 4 -->
+  <!-- PRODUCT 5 (Pink Ponchu) -->
   <article class="product-card" tabindex="0" role="group" aria-labelledby="prod4-title">
-    <a href="Buy_Baby_Accessories.html?prod=amigurumi-toys" style="text-decoration:none; color:inherit; display:block; position:relative;">
+    <a href="Buy_Baby_Accessories.html?prod=pink-ponchu" style="text-decoration:none; color:inherit; display:block; position:relative;">
       <div class="slider" data-slider>
         <div class="slides">
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys.png" alt="Amigurumi & Toys image 1" />
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys2.png" alt="Amigurumi & Toys image 2" />
-          <img src="https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys3.png" alt="Amigurumi & Toys image 3" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Pink_Ponchu/14.jpg" alt="Pink Ponchu image 1" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Pink_Ponchu/15.jpg" alt="Pink Ponchu image 2" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Pink_Ponchu/16.jpg" alt="Pink Ponchu image 3" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Pink_Ponchu/11.jpg" alt="Pink Ponchu image 4" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Pink_Ponchu/12.jpg" alt="Pink Ponchu image 5" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/Pink_Ponchu/13.jpg" alt="Pink Ponchu image 6" />
         </div>
         <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
         <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
       </div>
-      <h2 id="prod4-title" class="product-title">Amigurumi & Toys</h2>
+      <h2 id="prod4-title" class="product-title">Pink Ponchu</h2>
     </a>
   </article>
+  
+  <!-- PRODUCT 6 (White Blue Frock) -->
+  <article class="product-card" tabindex="0" role="group" aria-labelledby="prod6-title">
+    <a href="Buy_Baby_Accessories.html?prod=white-blue-frock" style="text-decoration:none; color:inherit; display:block; position:relative;">
+      <div class="slider" data-slider>
+        <div class="slides">
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/White_Blue_Frock/12.jpg" alt="White Blue Frock image 1" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/main/Images/Category/Baby_Products/White_Blue_Frock/13.jpg" alt="White Blue Frock image 2" />
+          <img src="https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/b46c4f3bc9e8a465a793e3cdb5152a4fb2ed7469/Images/Category/Baby_Products/White_Blue_Frock/11.png" alt="White Blue Frock image 3" />
+        </div>
+        <button class="slider-button prev" aria-label="Previous image" type="button">&#10094;</button>
+        <button class="slider-button next" aria-label="Next image" type="button">&#10095;</button>
+      </div>
+      <h2 id="prod6-title" class="product-title">White Blue Frock</h2>
+    </a>
+  </article>
+
   </section>
 </main>
 <footer>
