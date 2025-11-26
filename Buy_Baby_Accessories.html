@@ -72,14 +72,13 @@
   }
   main {
     max-width: 640px;
-    margin: 24px auto;
+    margin: 18px auto;
     padding: 0 20px 48px;
     background: var(--card);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    gap: 24px;
   }
   h1 {
     font-size: clamp(1.8rem, 2.6vw, 2.6rem);
@@ -164,37 +163,39 @@
   &copy; 2025 PULP. All rights reserved.
 </footer>
 <script>
+
   const products = {
     "red-frock": {
       name: "Red Frock",
       image: "https://raw.githubusercontent.com/i-Pulp/i-pulp.github.io/4e0316a9684686ec5df93718deb241ba8f2ee14d/Images/Category/Baby_Products/Red_Frock/Gemini_Generated_Image_uczzq5uczzq5uczz.jpg",
-      price: "$49.99",
-      description: "A charming handmade red frock perfect for your baby’s special occasions. Soft, breathable, and crafted with care.",
-      amazonLink: "https://www.amazon.com/dp/B00EXAMPLE1"
+      price: "₹899.00",
+      description: "Pulp Baby Girl Crochet Winter Frock with Cap &amp; Warm Shoes | Hand Knitted | Woollen Winter Wear | Crochet Wear | 12 Months Old | Red &amp; White Colour | Christmas Wear | For 1 year old",
+      amazonLink: "https://www.amazon.in/gp/product/B0G2JGCLPR/ref=cx_skuctr_share_ls_srb?smid=AO46KA4WB8YPO&tag=ShopReferral_0aae8b03-6ed4-4584-99fa-db8587324db2"
     },
     "booties-socks": {
       name: "Booties & Socks",
       image: "https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Booties.png",
-      price: "$19.99",
+      price: "Rs100",
       description: "Cozy handcrafted baby booties and socks to keep tiny feet warm and stylish.",
       amazonLink: "https://www.amazon.com/dp/B00EXAMPLE2"
     },
     "baby-blankets": {
       name: "Baby Blankets",
       image: "https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Blanket.png",
-      price: "$34.99",
+      price: "Rs100",
       description: "Soft and warm crochet baby blankets made with premium yarn for delicate skin.",
       amazonLink: "https://www.amazon.com/dp/B00EXAMPLE3"
     },
     "amigurumi-toys": {
       name: "Amigurumi & Toys",
       image: "https://raw.githubusercontent.com/God-Sins/Web/Images/Baby_Toys.png",
-      price: "$29.99",
+      price: "Rs100",
       description: "Handmade soft amigurumi toys, perfect for babies and toddlers as cuddly companions.",
       amazonLink: "https://www.amazon.com/dp/B00EXAMPLE4"
     }
   };
 
+  // Parse product key from URL query, e.g. product.html?prod=red-frock
   const urlParams = new URLSearchParams(window.location.search);
   const prodKey = urlParams.get('prod');
 
@@ -209,6 +210,7 @@
     const buyBtn = document.getElementById('buy-amazon');
     buyBtn.href = prod.amazonLink;
   } else {
+ 
     document.querySelector('main').innerHTML = '<h1>Product Not Found</h1><p>Sorry, the product you are looking for does not exist.</p><a href="index.html" class="buy-button">Return to Shop</a>';
   }
 </script>
